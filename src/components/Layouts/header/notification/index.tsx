@@ -64,10 +64,10 @@ export function Notification() {
           {isDotVisible && (
             <span
               className={cn(
-                "absolute right-0 top-0 z-1 size-2 rounded-full bg-red-light ring-2 ring-gray-2 dark:ring-dark-3",
+                "absolute right-0 top-0 z-1 size-2 rounded-full bg-blue-light ring-2 ring-gray-2 dark:ring-dark-3",
               )}
             >
-              <span className="absolute inset-0 -z-1 animate-ping rounded-full bg-red-light opacity-75" />
+              <span className="absolute inset-0 -z-1 animate-ping rounded-full bg-blue-light opacity-75" />
             </span>
           )}
         </span>

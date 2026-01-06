@@ -1,6 +1,7 @@
 "use client";
 
 import { SearchIcon } from "@/assets/icons";
+import logo from "@/assets/logos/logoBlue.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { useSidebarContext } from "../sidebar/sidebar-context";
@@ -25,9 +26,9 @@ export function Header() {
       {isMobile && (
         <Link href={"/"} className="ml-2 max-[430px]:hidden min-[375px]:ml-4">
           <Image
-            src={"/images/logo/logoAdmin.png"}
-            width={32}
-            height={32}
+            src={logo}
+            width={110}
+            height={40}
             alt=""
             role="presentation"
           />

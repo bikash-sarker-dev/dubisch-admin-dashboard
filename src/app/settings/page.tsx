@@ -1,9 +1,9 @@
-import Setting from "@/components/settings/Settings";
+import SettingsPage from "@/components/settings/Settings";
 
 const page = () => {
   return (
     <div>
-      <Setting />
+      <SettingsPage />
     </div>
   );
 };

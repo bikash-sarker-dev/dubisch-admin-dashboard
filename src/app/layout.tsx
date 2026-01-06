@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Duvisch Dashboard",
     description: "Modern Admin Dashboard for Duvisch",
-    url: "",
+    url: "https://duvisch-admin-dashboard.vercel.app",
     siteName: "Duvisch",
     images: [
       {
-        url: "",
+        url: "https://duvisch-admin-dashboard.vercel.app",
         width: 1200,
         height: 630,
         alt: "Duvisch Dashboard",

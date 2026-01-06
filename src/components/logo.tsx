@@ -1,9 +1,9 @@
-import logoThree from "@/assets/logos/mainLogo.png";
+import logoThree from "@/assets/logos/logoBlue.svg";
 import Image from "next/image";
 
 export function Logo() {
   return (
-    <div className="relative h-12 max-w-[10.847rem]">
+    <div className="relative h-16 max-w-[12.847rem]">
       <Image
         src={logoThree}
         fill
