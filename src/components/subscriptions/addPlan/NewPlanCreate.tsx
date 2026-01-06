@@ -95,7 +95,7 @@ export default function NewPlan() {
             </h2>
           </div>
 
-          <div className="mb-4 grid grid-cols-2 gap-4">
+          <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <label className="mb-2 block text-sm font-medium text-gray-700">
                 Plan Name
@@ -116,7 +116,7 @@ export default function NewPlan() {
                 <button
                   onClick={() => handleInputChange("status", !planData.status)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    planData.status ? "bg-indigo-600" : "bg-gray-300"
+                    planData.status ? "bg-primary" : "bg-gray-300"
                   }`}
                   aria-label="Toggle status"
                 >
@@ -150,7 +150,7 @@ export default function NewPlan() {
             <h2 className="text-lg font-semibold text-gray-900">Pricing</h2>
           </div>
 
-          <div className="grid grid-cols-3 gap-4">
+          <div className="gird-cols-1 grid gap-4 sm:grid-cols-3">
             <div>
               <label className="mb-2 block text-sm font-medium text-gray-700">
                 Monthly Price
@@ -203,13 +203,13 @@ export default function NewPlan() {
         {/* Feature Limits Section */}
         <div className="mb-6 rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
           <div className="mb-4 flex items-center gap-2">
-            <Zap className="h-5 w-5 text-indigo-500" />
+            <Zap className="h-5 w-5 text-primary" />
             <h2 className="text-lg font-semibold text-gray-900">
               Feature Limits
             </h2>
           </div>
 
-          <div className="mb-6 grid grid-cols-2 gap-4">
+          <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <label className="mb-2 block text-sm font-medium text-gray-700">
                 Max Meetings per Month
@@ -264,7 +264,7 @@ export default function NewPlan() {
                   onClick={() => handleFeatureToggle(feature.key)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                     planData.features[feature.key]
-                      ? "bg-indigo-600"
+                      ? "bg-primary"
                       : "bg-gray-300"
                   }`}
                   aria-label={`Toggle ${feature.label}`}
@@ -284,14 +284,14 @@ export default function NewPlan() {
 
         {/* Action Buttons */}
         <div className="flex items-center justify-end">
-          <div className="flex gap-3">
-            <button className="rounded-md bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200">
+          <div className="w-full gap-3 space-y-3 sm:flex sm:w-auto sm:space-y-0">
+            <button className="w-full rounded-md bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200 sm:w-auto">
               Reset to Default
             </button>
-            <button className="rounded-md bg-white px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-300">
+            <button className="w-full rounded-md border bg-white px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-300 sm:w-auto">
               Cancel
             </button>
-            <button className="rounded-md bg-indigo-600 px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-700">
+            <button className="w-full rounded-md bg-primary px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-primary sm:w-auto">
               Save Changes
             </button>
           </div>
