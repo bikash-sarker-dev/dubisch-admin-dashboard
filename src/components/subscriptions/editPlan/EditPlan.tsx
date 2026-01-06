@@ -95,7 +95,7 @@ export default function EidtPlan() {
             </h2>
           </div>
 
-          <div className="mb-4 grid grid-cols-2 gap-4">
+          <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <label className="mb-2 block text-sm font-medium text-gray-700">
                 Plan Name
@@ -116,7 +116,7 @@ export default function EidtPlan() {
                 <button
                   onClick={() => handleInputChange("status", !planData.status)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    planData.status ? "bg-indigo-600" : "bg-gray-300"
+                    planData.status ? "bg-primary" : "bg-gray-300"
                   }`}
                   aria-label="Toggle status"
                 >
@@ -150,7 +150,7 @@ export default function EidtPlan() {
             <h2 className="text-lg font-semibold text-gray-900">Pricing</h2>
           </div>
 
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             <div>
               <label className="mb-2 block text-sm font-medium text-gray-700">
                 Monthly Price
@@ -203,13 +203,13 @@ export default function EidtPlan() {
         {/* Feature Limits Section */}
         <div className="mb-6 rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
           <div className="mb-4 flex items-center gap-2">
-            <Zap className="h-5 w-5 text-indigo-500" />
+            <Zap className="h-5 w-5 text-primary" />
             <h2 className="text-lg font-semibold text-gray-900">
               Feature Limits
             </h2>
           </div>
 
-          <div className="mb-6 grid grid-cols-2 gap-4">
+          <div className="mb-6 grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <label className="mb-2 block text-sm font-medium text-gray-700">
                 Max Meetings per Month
@@ -264,7 +264,7 @@ export default function EidtPlan() {
                   onClick={() => handleFeatureToggle(feature.key)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                     planData.features[feature.key]
-                      ? "bg-indigo-600"
+                      ? "bg-primary"
                       : "bg-gray-300"
                   }`}
                   aria-label={`Toggle ${feature.label}`}
@@ -283,32 +283,34 @@ export default function EidtPlan() {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex items-center justify-between">
-          <button className="flex items-center gap-2 rounded-md bg-red-500 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-red-600">
-            <svg
-              className="h-4 w-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-              />
-            </svg>
-            Delete Plan
-          </button>
+        <div className="items-center justify-between space-y-3 sm:flex sm:space-y-0">
+          <div>
+            <button className="flex w-full items-center justify-center gap-2 rounded-md bg-red-500 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-red-600 sm:w-auto">
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                />
+              </svg>
+              Delete Plan
+            </button>
+          </div>
 
-          <div className="flex gap-3">
-            <button className="rounded-md bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200">
+          <div className="w-full gap-3 space-y-3 sm:flex sm:w-auto sm:space-y-0">
+            <button className="w-full rounded-md bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200 sm:w-auto">
               Reset to Default
             </button>
-            <button className="rounded-md bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-300">
+            <button className="w-full rounded-md border bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-300 sm:w-auto">
               Cancel
             </button>
-            <button className="rounded-md bg-indigo-600 px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-700">
+            <button className="w-full rounded-md bg-primary px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-primary sm:w-auto">
               Save Changes
             </button>
           </div>

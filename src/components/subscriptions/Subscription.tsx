@@ -40,22 +40,7 @@ const SubscriptionPlan: React.FC = () => {
         "Email support",
       ],
     },
-    // {
-    //   name: "Basic",
-    //   highlighted: true,
-    //   description:
-    //     "The Slate necessities. Every thing you need to get up and running.",
-    //   price: 16.0,
-    //   features: [
-    //     "Unlimited meeting preparations",
-    //     "Advanced AI insights & scripts",
-    //     "Competitor analysis",
-    //     "Risk alerts & red flags",
-    //     "Meeting templates",
-    //     "Priority support",
-    //     "Team collaboration (coming soon)",
-    //   ],
-    // },
+
     {
       name: "Premium",
       highlighted: false,
