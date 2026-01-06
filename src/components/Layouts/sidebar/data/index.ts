@@ -24,12 +24,12 @@ export const NAV_DATA: NavSection[] = [
         icon: Icons.CreditCard,
         items: [],
       },
-      {
-        title: "Notifications",
-        icon: Icons.Bell,
-        url: "/notification",
-        items: [],
-      },
+      // {
+      //   title: "Notifications",
+      //   icon: Icons.Bell,
+      //   url: "/notification",
+      //   items: [],
+      // },
       {
         title: "Settings",
         icon: Icons.Settings,

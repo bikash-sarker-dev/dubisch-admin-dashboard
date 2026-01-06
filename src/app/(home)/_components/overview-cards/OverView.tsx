@@ -40,32 +40,32 @@ const StatCard: React.FC<StatCardProps> = ({
 export default function DashboardOverview() {
   const stats = [
     {
-      icon: <Users className="h-6 w-6 text-indigo-600" />,
+      icon: <Users className="h-6 w-6 text-blue-600" />,
       title: "Total Users",
       value: "12,458",
       change: "+12.5%",
-      iconBgColor: "bg-indigo-100",
+      iconBgColor: "bg-blue-100",
     },
     {
-      icon: <CreditCard className="h-6 w-6 text-indigo-600" />,
+      icon: <CreditCard className="h-6 w-6 text-blue-600" />,
       title: "Active Subscriptions",
       value: "8,234",
       change: "+8.2%",
-      iconBgColor: "bg-indigo-100",
+      iconBgColor: "bg-blue-100",
     },
     {
-      icon: <DollarSign className="h-6 w-6 text-indigo-600" />,
+      icon: <DollarSign className="h-6 w-6 text-blue-600" />,
       title: "Monthly Revenue",
       value: "$124,567",
       change: "+15.3%",
-      iconBgColor: "bg-indigo-100",
+      iconBgColor: "bg-blue-100",
     },
     {
-      icon: <TrendingUp className="h-6 w-6 text-indigo-600" />,
+      icon: <TrendingUp className="h-6 w-6 text-blue-600" />,
       title: "Subscription Health",
       value: "94.2%",
       change: "+2.4%",
-      iconBgColor: "bg-indigo-100",
+      iconBgColor: "bg-blue-100",
     },
   ];
 

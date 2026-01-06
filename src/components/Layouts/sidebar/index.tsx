@@ -224,7 +224,7 @@ export function Sidebar() {
     );
   };
 
-  /** ⭐ Auto-expand if child matches */
+  /**  Auto-expand if child matches */
   useEffect(() => {
     NAV_DATA.forEach((section) =>
       section.items.forEach((item: NavItem) => {
@@ -351,10 +351,10 @@ export function Sidebar() {
           </div>
 
           {/* Logout */}
-          <div className="mt-auto border-t pt-5">
+          <div className="mt-5 border-t pt-5">
             <button
               onClick={handleLogout}
-              className="flex w-full items-center gap-3 rounded-xl px-4 py-3 text-red-600 hover:bg-red-50"
+              className="flex w-full cursor-pointer items-center gap-3 rounded-md bg-red-100 px-4 py-3 text-red-600 hover:bg-red-300"
             >
               <LogOutIcon className="size-6" />
               <span className="font-medium">Logout</span>

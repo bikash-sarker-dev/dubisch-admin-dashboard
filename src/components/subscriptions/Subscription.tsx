@@ -26,30 +26,6 @@ interface Distribution {
 }
 
 const SubscriptionPlan: React.FC = () => {
-  const metrics: Metric[] = [
-    {
-      icon: <TrendingUp className="h-7 w-7 text-green-500" />,
-      label: "Monthly Recurring Revenue",
-      value: "12,458",
-      change: "+12.5% from last month",
-      positive: true,
-    },
-    {
-      icon: <TrendingDown className="h-7 w-7 text-red-500" />,
-      label: "Churn Rate",
-      value: "8,234",
-      change: "+8.2% from last month",
-      positive: false,
-    },
-    {
-      icon: <Users className="h-7 w-7 text-blue-500" />,
-      label: "Active Subscriptions",
-      value: "3200",
-      change: "+2.4% from last month",
-      positive: true,
-    },
-  ];
-
   const plans: Plan[] = [
     {
       name: "Basic",
@@ -122,26 +98,6 @@ const SubscriptionPlan: React.FC = () => {
           >
             Add New Plan
           </Link>
-        </div>
-
-        {/* Metrics Cards */}
-        <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {metrics.map((metric: Metric, index: number) => (
-            <div key={index} className="rounded-lg bg-white p-6 shadow-sm">
-              <div className="mb-3 flex items-center gap-2 text-2xl">
-                {metric.icon}
-              </div>
-              <p className="mb-2 text-sm text-gray-600">{metric.label}</p>
-              <p className="mb-2 text-2xl font-bold text-gray-900">
-                {metric.value}
-              </p>
-              <p
-                className={`text-sm ${metric.positive ? "text-green-600" : "text-red-600"}`}
-              >
-                {metric.change}
-              </p>
-            </div>
-          ))}
         </div>
 
         {/* Subscription Plans */}

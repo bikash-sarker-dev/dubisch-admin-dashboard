@@ -155,8 +155,8 @@ const RevenueGrowthChart: React.FC = () => {
               >
                 <defs>
                   <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#8b5cf6" stopOpacity={0.3} />
-                    <stop offset="95%" stopColor="#8b5cf6" stopOpacity={0.05} />
+                    <stop offset="5%" stopColor="#005EEB" stopOpacity={0.3} />
+                    <stop offset="95%" stopColor="#005EEB" stopOpacity={0.05} />
                   </linearGradient>
                 </defs>
                 <CartesianGrid
@@ -182,17 +182,17 @@ const RevenueGrowthChart: React.FC = () => {
                 />
                 <Tooltip
                   content={<CustomTooltip />}
-                  cursor={{ stroke: "#8b5cf6", strokeWidth: 2 }}
+                  cursor={{ stroke: "#005EEB", strokeWidth: 2 }}
                 />
                 <Area
                   type="monotone"
                   dataKey="revenue"
-                  stroke="#8b5cf6"
+                  stroke="#005EEB"
                   strokeWidth={3}
                   fill="url(#colorRevenue)"
                   activeDot={{
                     r: 6,
-                    fill: "#8b5cf6",
+                    fill: "#005EEB",
                     stroke: "#fff",
                     strokeWidth: 3,
                   }}
