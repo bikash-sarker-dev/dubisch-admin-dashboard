@@ -9,6 +9,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import Link from "next/link";
 
 // Types
 interface User {
@@ -369,12 +370,13 @@ const UserManagement: React.FC = () => {
                     </td>
                     <td className="whitespace-nowrap px-6 py-4">
                       <div className="flex items-center gap-2">
-                        <button
+                        <Link
+                          href={"/user-management/details"}
                           className="rounded p-1.5 transition-colors hover:bg-gray-100"
                           aria-label="View user"
                         >
                           <Eye className="h-4 w-4 text-gray-600" />
-                        </button>
+                        </Link>
                         <button
                           onClick={() => handleSuspend(user.id)}
                           className="rounded p-1.5 transition-colors hover:bg-gray-100"
