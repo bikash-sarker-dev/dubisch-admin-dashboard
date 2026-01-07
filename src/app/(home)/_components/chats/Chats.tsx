@@ -38,14 +38,17 @@ const generateData = (): ChartDataPoint[] => {
     "Jan",
     "Feb",
     "Mar",
-    "Mar",
-    "Mar",
-    "Mar",
-    "Mar",
     "Apr",
     "May",
     "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
+
   return months.map(
     (month: string): ChartDataPoint => ({
       month,
