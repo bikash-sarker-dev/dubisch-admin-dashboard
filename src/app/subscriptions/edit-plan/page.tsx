@@ -1,5 +1,9 @@
 import EidtPlan from "@/components/subscriptions/editPlan/EditPlan";
-import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Edit Subscription",
+};
 
 const page = () => {
   return (

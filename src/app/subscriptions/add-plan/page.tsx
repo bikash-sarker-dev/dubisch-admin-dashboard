@@ -1,5 +1,9 @@
 import NewPlan from "@/components/subscriptions/addPlan/NewPlanCreate";
-import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Add Subscription",
+};
 
 const page = () => {
   return (
