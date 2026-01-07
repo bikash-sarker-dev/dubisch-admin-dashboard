@@ -31,7 +31,7 @@ const UserManagement: React.FC = () => {
     useState<FilterSubscription>("all");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [showFilters, setShowFilters] = useState<boolean>(false);
-  const itemsPerPage: number = 6;
+  const itemsPerPage: number = 7;
 
   const [users, setUsers] = useState<User[]>([
     {
@@ -56,7 +56,7 @@ const UserManagement: React.FC = () => {
       id: 3,
       name: "Darrell Steward",
       email: "tanya.hill@example.com",
-      location: "New York, NY",
+      location: "Chicago, IL",
       subscription: "Premium",
       householdSize: 3,
       status: "Active",
@@ -64,8 +64,8 @@ const UserManagement: React.FC = () => {
     {
       id: 4,
       name: "Jacob Jones",
-      email: "debra.holt@example.com",
-      location: "New York, NY",
+      email: "jacob.jones@example.com",
+      location: "Los Angeles, CA",
       subscription: "Free",
       householdSize: 2,
       status: "Inactive",
@@ -73,8 +73,8 @@ const UserManagement: React.FC = () => {
     {
       id: 5,
       name: "Floyd Miles",
-      email: "felicia.reid@example.com",
-      location: "New York, NY",
+      email: "floyd.miles@example.com",
+      location: "Houston, TX",
       subscription: "Premium",
       householdSize: 5,
       status: "Active",
@@ -82,11 +82,65 @@ const UserManagement: React.FC = () => {
     {
       id: 6,
       name: "Kristin Watson",
-      email: "sara.cruz@example.com",
-      location: "New York, NY",
+      email: "kristin.watson@example.com",
+      location: "Seattle, WA",
       subscription: "Premium",
       householdSize: 6,
       status: "Suspended",
+    },
+    {
+      id: 7,
+      name: "Eleanor Pena",
+      email: "eleanor.pena@example.com",
+      location: "Boston, MA",
+      subscription: "Free",
+      householdSize: 1,
+      status: "Active",
+    },
+    {
+      id: 8,
+      name: "Courtney Henry",
+      email: "courtney.henry@example.com",
+      location: "Denver, CO",
+      subscription: "Premium",
+      householdSize: 4,
+      status: "Active",
+    },
+    {
+      id: 9,
+      name: "Wade Warren",
+      email: "wade.warren@example.com",
+      location: "Miami, FL",
+      subscription: "Free",
+      householdSize: 2,
+      status: "Inactive",
+    },
+    {
+      id: 10,
+      name: "Savannah Nguyen",
+      email: "savannah.nguyen@example.com",
+      location: "San Jose, CA",
+      subscription: "Premium",
+      householdSize: 3,
+      status: "Active",
+    },
+    {
+      id: 11,
+      name: "Ronald Richards",
+      email: "ronald.richards@example.com",
+      location: "Phoenix, AZ",
+      subscription: "Free",
+      householdSize: 4,
+      status: "Suspended",
+    },
+    {
+      id: 12,
+      name: "Jenny Wilson",
+      email: "jenny.wilson@example.com",
+      location: "Dallas, TX",
+      subscription: "Premium",
+      householdSize: 2,
+      status: "Active",
     },
   ]);
 
@@ -165,20 +219,22 @@ const UserManagement: React.FC = () => {
     <div className="">
       <div className="">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="mb-2 text-3xl font-bold text-gray-900">
-            User Management
-          </h1>
-          <p className="text-gray-600">
-            Manage all platform users and their accounts
-          </p>
-        </div>
+        <div className="flex items-center justify-between">
+          <div className="mb-8">
+            <h1 className="mb-2 text-3xl font-bold text-gray-900">
+              User Management
+            </h1>
+            <p className="text-gray-600">
+              Manage all platform users and their accounts
+            </p>
+          </div>
 
-        {/* Team Member Section */}
-        <div className="mb-6">
-          <h2 className="text-xl font-semibold text-gray-900">
-            All Team Member
-          </h2>
+          {/* Team Member Section */}
+          <div className="mb-6">
+            <h2 className="text-xl font-semibold text-gray-900">
+              All Team Member
+            </h2>
+          </div>
         </div>
 
         {/* Users Card */}
@@ -216,7 +272,7 @@ const UserManagement: React.FC = () => {
 
             {/* Filter Dropdowns */}
             {showFilters && (
-              <div className="mt-4 flex gap-4">
+              <div className="mt-4 flex w-full justify-end gap-4 transition-all">
                 <select
                   value={filterStatus}
                   onChange={handleStatusChange}
