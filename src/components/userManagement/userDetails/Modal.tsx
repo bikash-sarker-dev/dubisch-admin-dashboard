@@ -21,7 +21,7 @@ const Modal: React.FC<ModalProps> = ({
   if (!show) return null;
 
   return (
-    <div className="animate-fadeIn fixed inset-0 z-20 flex items-center justify-center bg-black bg-opacity-50 p-4">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-4">
       <div className="animate-scaleIn w-full max-w-md rounded-xl bg-white p-5 shadow-2xl sm:rounded-2xl sm:p-6">
         <div className="mb-4 flex items-start justify-between">
           <div className="flex items-center gap-2 sm:gap-3">
